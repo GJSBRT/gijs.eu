@@ -30,14 +30,8 @@ export default function() {
             <hr className="my-8 border-t border-gray-800"/>
 
             <ul className="mt-4 flex flex-col gap-4">
-                <ListItem icon={<AtSymbolIcon/>} href='/' title='DutchIS' description="A very cool and unqiue url shortner which is totaly revolutionary!"/>
-                <ListItem icon={<AtSymbolIcon/>} href='/' title='URL Shortner' description="A very cool and unqiue url shortner which is totaly revolutionary!"/>
-                <ListItem icon={<AtSymbolIcon/>} href='/' title='URL Shortner' description="A very cool and unqiue url shortner which is totaly revolutionary!"/>
-                <ListItem icon={<AtSymbolIcon/>} href='/' title='URL Shortner' description="A very cool and unqiue url shortner which is totaly revolutionary!"/>
-                <ListItem icon={<AtSymbolIcon/>} href='/' title='URL Shortner' description="A very cool and unqiue url shortner which is totaly revolutionary!"/>
-                <ListItem icon={<AtSymbolIcon/>} href='/' title='URL Shortner' description="A very cool and unqiue url shortner which is totaly revolutionary!"/>
-                <ListItem icon={<AtSymbolIcon/>} href='/' title='URL Shortner' description="A very cool and unqiue url shortner which is totaly revolutionary!"/>
-                <ListItem icon={<AtSymbolIcon/>} href='/' title='URL Shortner' description="A very cool and unqiue url shortner which is totaly revolutionary!"/>
+                <ListItem icon={<AtSymbolIcon/>} href='https://dutchis.net?ref=gijs.eu' title='DutchIS' description="Virtual and dedicated server hosting with many extra's like IXPs, BGP, and more."/>
+                <ListItem icon={<AtSymbolIcon/>} href='https://noxxer.net?ref=gijs.eu' title='Noxxer' description="Easy to use game hosting with high performance hardware."/>
             </ul>
         </>
     )

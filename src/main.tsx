@@ -8,21 +8,21 @@ import Container from './elements/Container';
 import Render from './pages/Errors/Render';
 
 const router = createBrowserRouter([
-  {
-    path: "/",
-    element: <Container/>,
-    errorElement: <Render/>,
-    children: [
-      {
-        path: "",
-        element: <Home/>,
-      },
-    ]
-  },
+    {
+        path: "/",
+        element: <Container />,
+        errorElement: <Render />,
+        children: [
+            {
+                path: "",
+                element: <Home />,
+            },
+        ]
+    },
 ]);
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
-  <React.StrictMode>
-    <RouterProvider router={router} />
-  </React.StrictMode>,
+    <React.StrictMode>
+        <RouterProvider router={router} />
+    </React.StrictMode>,
 )
