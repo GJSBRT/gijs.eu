@@ -26,7 +26,7 @@ export default function(props: Props) {
     }
 
     return (
-        <li className="p-4 hover:bg-gray-100 dark:hover:bg-gray-900 transition-all rounded-md cursor-pointer flex items-center" onClick={handleClick}>
+        <li className="p-4 hover:bg-gray-100/75 dark:hover:bg-gray-900/75 transition-all rounded-md cursor-pointer flex items-center" onClick={handleClick}>
             <label className="cursor-pointer flex">
                 <label className="w-6 h-6 my-auto mr-1 cursor-pointer">{props.icon}</label> 
                 {props.title}
@@ -34,7 +34,7 @@ export default function(props: Props) {
 
             <div className="mx-2">-</div>
 
-            <span className="text-gray-600 dark:text-gray-400 text-sm">
+            <span className="text-gray-600 dark:text-gray-400 transition-colors text-sm">
                 {props.description}
             </span>
         </li>

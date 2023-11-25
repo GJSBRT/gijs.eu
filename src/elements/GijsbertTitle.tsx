@@ -2,7 +2,7 @@ interface Props extends React.HTMLAttributes<HTMLOrSVGElement> {} {}
 
 export default function(props: Props) {
     return (
-        <svg id="Layer_2" data-name="Layer 2" className="mx-auto my-4 dark:fill-white fill-black" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120.88 43.05" {...props}>
+        <svg id="Layer_2" data-name="Layer 2" className="mx-auto my-4 dark:fill-white fill-black transition-colors" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120.88 43.05" {...props}>
             <g id="Layer_1-2" data-name="Layer 1">
                 <path d="m14.58,8.75c-3.61-1.63-7.45.51-9.34,3.72s-2.13,7.7.24,10.79c2.14,2.79,6.1,4.14,9.39,2.65s4.91-5.39,4.97-8.92l-2.95.4c.5,3,.41,6.05.26,9.07-.13,2.61-.07,5.34-.61,7.91-.49,2.31-1.66,4.41-3.95,5.34s-4.91.24-6.64-1.54c-1.35-1.39-3.47.74-2.12,2.12,4.59,4.72,12.41,3.14,14.91-2.9,1.2-2.89,1.15-6.14,1.31-9.22.2-3.88.37-7.73-.28-11.58-.29-1.71-2.92-1.24-2.95.4-.04,2.23-.8,4.85-2.87,6.02s-4.49.29-5.92-1.34c-1.66-1.91-1.6-4.82-.57-7.02.88-1.87,3.29-4.35,5.59-3.31,1.75.79,3.27-1.8,1.51-2.59h0Z"/>
                 <path d="m25.28,14.69c.35,3.13.41,6.28.16,9.41-.06.78.73,1.53,1.5,1.5.87-.04,1.43-.66,1.5-1.5.25-3.14.19-6.29-.16-9.41-.09-.78-.63-1.54-1.5-1.5-.74.03-1.59.66-1.5,1.5h0Z"/>
