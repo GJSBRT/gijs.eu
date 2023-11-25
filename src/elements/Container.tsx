@@ -14,7 +14,7 @@ export default function() {
     return (
         <main className="min-h-screen relative bg-opacity-50 dark:text-white text-black transition-colors">
             <div className="absolute w-full h-full z-10">
-                <DarkModeToggle className="absolute top-8 right-8"/>
+                <DarkModeToggle className="absolute top-4 right-4 p-4"/>
 
                 <div className="max-w-3xl mx-2 md:mx-auto py-8 flex flex-col">
                     <Outlet/>

@@ -7,7 +7,7 @@ import GijsbertTitle from '../elements/GijsbertTitle';
 export default function() {
     return (
         <>
-            <NavLink to='/' className='w-80 my-4 mx-auto'>
+            <NavLink to='/' className='sm:w-80 py-4 px-4 sm:px-0 w-full mx-auto' title='Logo'>
                 <GijsbertTitle/>
             </NavLink>
 

@@ -25,7 +25,7 @@ export default function(props: Props) {
     }
 
     return (
-        <button onClick={onClick} {...props}>
+        <button onClick={onClick} {...props} title='Dark mode toggle button'>
             {darkMode ?
                 <SunIcon className="w-6 h-6 cursor-pointer"/>
             :

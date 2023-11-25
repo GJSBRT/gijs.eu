@@ -3,15 +3,18 @@
 
 <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="keywords" content="Personal website, gijs.eu, gijsbert" />
+    <meta name="publisher" content="Gijsbert"/>
+    <meta name="description" content="My personal website. A gateway to many of my experiments"/>
+    <meta property="og:type" content="website"/>
     <title>gijs.eu</title>
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <script defer data-domain="gijs.eu" src="https://plausible.dutchis.net/js/script.js"></script>
 </head>
 
 <body class="dark:bg-gray-950 bg-gray-50 transition-colors">
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
+    <div id="gijs"></div>
     <script>
         if (typeof window !== 'undefined') {
             if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
@@ -21,6 +24,7 @@
             }
         }
     </script>
+    <script type="module" src="/src/main.tsx"></script>
 </body>
 
 </html>
