@@ -1,37 +1,19 @@
-import { AtSymbolIcon } from '@heroicons/react/24/solid';
+import { NavLink } from 'react-router-dom';
+import { PuzzlePieceIcon, ServerStackIcon } from '@heroicons/react/24/outline';
 
 import ListItem from "../elements/ListItem";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faDiscord, faGithub, faLinkedin, faXTwitter } from '@fortawesome/free-brands-svg-icons';
+import GijsbertTitle from '../elements/GijsbertTitle';
 
 export default function() {
     return (
         <>
-            <h1 className="text-4xl text-center font-semibold">Gijsbert</h1>
-
-            <ul className='mx-auto flex gap-4 mt-4'>
-                <li>
-                    <a href="https://github.com/GJSBRT" target='_blank'><FontAwesomeIcon icon={faGithub} /></a>
-                </li>
-
-                <li>
-                    <a href="https://linkedin.com/in/gijsbert" target='_blank'><FontAwesomeIcon icon={faLinkedin} /></a>
-                </li>
-
-                <li>
-                    <a href="https://x.com/GSBRT1" target='_blank'><FontAwesomeIcon icon={faXTwitter} /></a>
-                </li>
-
-                <li>
-                    <a href="https://discord.com/users/702501824762216478" target='_blank'><FontAwesomeIcon icon={faDiscord} /></a>
-                </li>
-            </ul>
-
-            <hr className="my-8 border-t border-gray-800"/>
+            <NavLink to='/' className='w-80 my-4 mx-auto'>
+                <GijsbertTitle/>
+            </NavLink>
 
             <ul className="mt-4 flex flex-col gap-4">
-                <ListItem icon={<AtSymbolIcon/>} href='https://dutchis.net?ref=gijs.eu' title='DutchIS' description="Virtual and dedicated server hosting with many extra's like IXPs, BGP, and more."/>
-                <ListItem icon={<AtSymbolIcon/>} href='https://noxxer.net?ref=gijs.eu' title='Noxxer' description="Easy to use game hosting with high performance hardware."/>
+                <ListItem icon={<ServerStackIcon/>} href='https://dutchis.net?ref=gijs.eu' title='DutchIS' description="Virtual and dedicated server hosting with many extra's like IXPs, BGP, and more."/>
+                <ListItem icon={<PuzzlePieceIcon/>} href='https://noxxer.net?ref=gijs.eu' title='Noxxer' description="Easy to use game hosting with high performance hardware."/>
             </ul>
         </>
     )

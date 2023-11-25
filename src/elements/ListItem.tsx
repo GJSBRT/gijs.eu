@@ -1,4 +1,4 @@
-import { NavLink } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 interface Props {
     icon: React.ReactNode;
@@ -9,25 +9,34 @@ interface Props {
 }
 
 export default function(props: Props) {
-    const item = (
-        <>
-            <label className="cursor-pointer">{props.title}</label> - <span className="text-gray-400 text-sm">{props.description}</span>
-        </>
-    );
+    const navigate = useNavigate();
+
+    const handleClick = function() {
+        if (props.to != undefined) {
+            navigate(props.to);
+            return;
+        }
+
+        if (props.href != undefined) {
+            window.open(props.href, '_blank');
+            return;
+        }
+
+        console.warn('ListItem has no href or to property');
+    }
 
     return (
-        <li className="p-4 hover:bg-gray-900 transition-all rounded-md">
-            {props.href &&
-                <a href={props.href} target='_blank'>
-                    {item}
-                </a>
-            }
+        <li className="p-4 hover:bg-gray-100 dark:hover:bg-gray-900 transition-all rounded-md cursor-pointer flex items-center" onClick={handleClick}>
+            <label className="cursor-pointer flex">
+                <label className="w-6 h-6 my-auto mr-1 cursor-pointer">{props.icon}</label> 
+                {props.title}
+            </label> 
 
-            {props.to &&
-                <NavLink to={props.to}>
-                    {item}
-                </NavLink>
-            }
+            <div className="mx-2">-</div>
+
+            <span className="text-gray-600 dark:text-gray-400 text-sm">
+                {props.description}
+            </span>
         </li>
     )
 }
