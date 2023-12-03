@@ -6,7 +6,7 @@ import Moon from "./Icons/Moon";
 interface Props extends React.ButtonHTMLAttributes<HTMLButtonElement> {}
 
 export default function(props: Props) {
-    const [darkMode, setDarkMode] = useState((localStorage.getItem('theme') ?? '') == 'dark');
+    const [darkMode, setDarkMode] = useState(!import.meta.env.SSR && (localStorage.getItem('theme') ?? '') == 'dark');
 
     const onClick = function() {
         const html = document.querySelector('html');
@@ -15,14 +15,16 @@ export default function(props: Props) {
             return;
         }
 
-        if (darkMode) {
-            html.classList.remove('dark');
-            localStorage.setItem('theme', 'light');
-            setDarkMode(false);
-        } else {
-            html.classList.add('dark');
-            localStorage.setItem('theme', 'dark');
-            setDarkMode(true);
+        if (!import.meta.env.SSR) {
+            if (darkMode) {
+                html.classList.remove('dark');
+                localStorage.setItem('theme', 'light');
+                setDarkMode(false);
+            } else {
+                html.classList.add('dark');
+                localStorage.setItem('theme', 'dark');
+                setDarkMode(true);
+            }
         }
     }
 

@@ -7,17 +7,8 @@ export default defineConfig({
         react(),
         laravel({
             input: ['resources/css/app.css', 'resources/js/app.tsx'],
+            ssr: ['resources/css/app.css', 'resources/js/ssr.tsx'],
             refresh: true,
         }),
     ],
-    build: {
-        rollupOptions: {
-            output: {
-                manualChunks: {
-                    'inertia': ['@inertiajs/react'],
-                    'react-markdown': ['react-markdown'],
-                },
-            }
-        },
-    },
 })
