@@ -1,4 +1,4 @@
-import { Suspense } from 'react';
+import { StrictMode, Suspense } from 'react';
 import { createRoot } from 'react-dom/client';
 import { createInertiaApp } from '@inertiajs/react';
 
@@ -27,11 +27,13 @@ createInertiaApp({
     },
     setup({ el, App, props }) {
         createRoot(el).render(
-            <Suspense fallback={<RenderError/>}>
-                <Container>
-                    <App { ...props } />
-                </Container>
-            </Suspense>
+            <StrictMode>
+                <Suspense fallback={<RenderError/>}>
+                    <Container>
+                        <App { ...props } />
+                    </Container>
+                </Suspense>
+            </StrictMode>
         )
     },
 })

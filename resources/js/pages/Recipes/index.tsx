@@ -20,6 +20,12 @@ export default function() {
                 {recipes.map((recipe) => (
                     <RecipeItem key={recipe.slug} {...recipe} />   
                 ))}
+
+                {recipes.length == 0 && ( 
+                    <p className="text-gray-700 dark:text-gray-300 text-lg text-center">
+                        No recipes have been added yet.
+                    </p>
+                )}
             </ul>
         </>
     )
