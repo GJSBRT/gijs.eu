@@ -1,10 +1,11 @@
-import { StrictMode, Suspense } from 'react';
 import { createRoot } from 'react-dom/client';
+import { StrictMode, Suspense, lazy } from 'react';
 import { createInertiaApp } from '@inertiajs/react';
 import { resolvePageComponent } from 'laravel-vite-plugin/inertia-helpers';
 
 import Container from './elements/Container';
-import RenderError from './pages/Errors/Render';
+
+const RenderError = lazy(() => import('./pages/Errors/Render.tsx'));
 
 createInertiaApp({
     resolve: (name) => {
