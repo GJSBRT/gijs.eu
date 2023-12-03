@@ -14,7 +14,7 @@ export default defineConfig({
         rollupOptions: {
             output: {
                 manualChunks: {
-                    'inertia': ['@heroicons/react'],
+                    'inertia': ['@inertiajs/react'],
                     'react-markdown': ['react-markdown'],
                     'heroicons': ['@heroicons/react'],
                     'utils': ['sort-by', 'match-sorter']
