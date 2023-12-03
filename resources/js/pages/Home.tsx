@@ -12,7 +12,7 @@ export default function() {
                 <GijsbertTitle/>
             </Link>
 
-            <ul className='grid grid-cols-3 gap-8 m-4'>
+            <ul className='grid sm:grid-cols-3 gap-8 m-4'>
                 <CardLink 
                     title='Recipes' 
                     description='A collection of recipes I use for cooking.'
