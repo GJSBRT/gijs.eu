@@ -1,6 +1,7 @@
 import { StrictMode, Suspense } from 'react';
 import { createRoot } from 'react-dom/client';
 import { createInertiaApp } from '@inertiajs/react';
+import { resolvePageComponent } from 'laravel-vite-plugin/inertia-helpers';
 
 import Container from './elements/Container';
 import RenderError from './pages/Errors/Render';
@@ -8,10 +9,7 @@ import RenderError from './pages/Errors/Render';
 createInertiaApp({
     resolve: (name) => {
         // @ts-expect-error - Glob import
-        const pages = import.meta.glob('./pages/**/*.tsx', { 
-            eager: true 
-        });
-
+        const pages = import.meta.glob('./pages/**/*.tsx');
         let filePath = `./pages/${name}.tsx`;
 
         if (pages[filePath] === undefined) {
@@ -23,7 +21,7 @@ createInertiaApp({
             }
         }
 
-        return pages[filePath];
+        return resolvePageComponent(filePath, pages);
     },
     setup({ el, App, props }) {
         createRoot(el).render(

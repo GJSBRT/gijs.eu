@@ -12,7 +12,7 @@
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <script defer data-domain="gijs.eu" src="https://plausible.dutchis.net/js/script.js"></script>
     @inertiaHead
-    @viteReactRefresh 
+    @viteReactRefresh
     @vite(['resources/css/app.css', 'resources/js/app.tsx'])
 </head>
 
