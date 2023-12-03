@@ -1,7 +1,5 @@
-import { Outlet } from "react-router-dom";
-
 // @ts-expect-error - SVG file
-import BackgroundTile from '../assets/svgs/background-tile.svg';
+import BackgroundTile from '../../assets/svgs/background-tile.svg';
 import DarkModeToggle from "./DarkModeToggle";
 
 interface Props {
@@ -17,7 +15,7 @@ export default function(props: Props) {
 
     return (
         <main className="min-h-screen relative bg-opacity-50 dark:text-white text-black transition-colors">
-            <div className="absolute w-full h-full z-10">
+            <div className="absolute w-full z-10 h-screen overflow-y-scroll">
                 <DarkModeToggle className="absolute top-4 right-4 p-4"/>
 
                 <div className="max-w-3xl mx-2 md:mx-auto py-8 flex flex-col">

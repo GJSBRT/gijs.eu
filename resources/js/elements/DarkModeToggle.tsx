@@ -1,5 +1,7 @@
 import { useState } from "react";
-import { MoonIcon, SunIcon } from "@heroicons/react/24/outline";
+
+import Sun from "./Icons/Sun";
+import Moon from "./Icons/Moon";
 
 interface Props extends React.ButtonHTMLAttributes<HTMLButtonElement> {}
 
@@ -27,9 +29,9 @@ export default function(props: Props) {
     return (
         <button onClick={onClick} {...props} title='Dark mode toggle button'>
             {darkMode ?
-                <SunIcon className="w-6 h-6 cursor-pointer"/>
+                <Sun className="w-6 h-6 cursor-pointer dark:fill-white fill-black transition-all"/>
             :
-                <MoonIcon className="w-6 h-6 cursor-pointer"/>
+                <Moon className="w-6 h-6 cursor-pointer dark:fill-white fill-black transition-all"/>
             }
         </button>
     )
