@@ -8,6 +8,7 @@ import Container from './elements/Container';
 const RenderError = lazy(() => import('./pages/Errors/Render.tsx'));
 
 createInertiaApp({
+    progress: false,
     resolve: (name) => {
         // @ts-expect-error - Glob import
         const pages = import.meta.glob('./pages/**/*.tsx');

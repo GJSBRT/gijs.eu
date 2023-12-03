@@ -10,4 +10,16 @@ export default defineConfig({
             refresh: true,
         }),
     ],
+    build: {
+        rollupOptions: {
+            output: {
+                manualChunks: {
+                    'inertia': ['@heroicons/react'],
+                    'react-markdown': ['react-markdown'],
+                    'heroicons': ['@heroicons/react'],
+                    'utils': ['sort-by', 'match-sorter']
+                },
+            }
+        },
+    },
 })

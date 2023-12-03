@@ -13,11 +13,13 @@ export default function() {
             </Link>
 
             <ul className='grid sm:grid-cols-3 gap-8 m-4'>
-                <CardLink 
-                    title='Recipes' 
-                    description='A collection of recipes I use for cooking.'
-                    href='/recipes'
-                />
+                <li>
+                    <CardLink 
+                        title='Recipes' 
+                        description='A collection of recipes I use for cooking.'
+                        href='/recipes'
+                    />
+                </li>
             </ul>
 
             <ul className="mt-4 flex flex-col gap-4">
