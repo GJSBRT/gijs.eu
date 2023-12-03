@@ -163,11 +163,11 @@ return [
         /*
          * Application Service Providers...
          */
-        App\Providers\AppServiceProvider::class,
-        App\Providers\AuthServiceProvider::class,
-        // App\Providers\BroadcastServiceProvider::class,
-        App\Providers\EventServiceProvider::class,
-        App\Providers\RouteServiceProvider::class,
+        Gijs\Providers\AppServiceProvider::class,
+        Gijs\Providers\AuthServiceProvider::class,
+        // Gijs\Providers\BroadcastServiceProvider::class,
+        Gijs\Providers\EventServiceProvider::class,
+        Gijs\Providers\RouteServiceProvider::class,
     ])->toArray(),
 
     /*
@@ -182,7 +182,7 @@ return [
     */
 
     'aliases' => Facade::defaultAliases()->merge([
-        // 'Example' => App\Facades\Example::class,
+        // 'Example' => Gijs\Facades\Example::class,
     ])->toArray(),
 
 ];

@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Http\Middleware;
+namespace Gijs\Http\Middleware;
 
-use App\Providers\RouteServiceProvider;
+use Gijs\Providers\RouteServiceProvider;
 use Closure;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;

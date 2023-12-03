@@ -17,7 +17,7 @@
         "jsx": "react-jsx",
         "paths": {
             "@/*": [
-                "./src"
+                "./resources/js"
             ]
         },
         "strict": true,
@@ -26,6 +26,6 @@
         "noFallthroughCasesInSwitch": true
     },
     "include": [
-        "src"
+        "resources/js"
     ]
 }

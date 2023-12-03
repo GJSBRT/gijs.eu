@@ -7,7 +7,7 @@ import ListItem from '../elements/ListItem';
 export default function() {
     return (
         <>
-            <Link to='/' className='sm:w-80 py-4 px-4 sm:px-0 w-full mx-auto' title='Logo'>
+            <Link href='/' className='sm:w-80 py-4 px-4 sm:px-0 w-full mx-auto' title='Logo'>
                 <GijsbertTitle/>
             </Link>
 
