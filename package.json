@@ -21,6 +21,7 @@
         "autoprefixer": "^10.4.16",
         "laravel-vite-plugin": "^0.8.1",
         "match-sorter": "^6.3.1",
+        "million": "^2.6.4",
         "postcss": "^8.4.31",
         "react": "^18.2.0",
         "react-dom": "^18.2.0",
