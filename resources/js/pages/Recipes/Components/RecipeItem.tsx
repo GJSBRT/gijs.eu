@@ -1,4 +1,5 @@
-import { Link } from "@inertiajs/react"
+import { motion } from "framer-motion";
+import { Link } from "@inertiajs/react";
 
 import Sad from "../../../elements/Icons/Sad"
 import Star from "../../../elements/Icons/Star"
@@ -23,7 +24,10 @@ interface Props {
 
 export default function(props: Props) {
     return (
-        <li>
+        <motion.li variants={{
+            hidden: { opacity: 0 },
+            show: { opacity: 1 }
+        }}>
             <Link href={`/recipes/${props.slug}`} className="flex flex-col sm:flex-row gap-4 w-full hover:scale-105 relative text-white sm:text-black sm:dark:text-white transition-all">
                 <div className="bg-black/40 backdrop-blur-sm rounded-lg absolute w-full h-full sm:hidden"></div>
                 <img src={props.image} alt={props.title} className="sm:h-24 sm:w-32 h-64 w-full object-cover rounded-lg"/>
@@ -73,6 +77,6 @@ export default function(props: Props) {
                     </div>
                 </div>
             </Link>
-        </li>
+        </motion.li>
     )    
 }
