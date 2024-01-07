@@ -49,10 +49,10 @@ export default function(props: Props) {
                         </span>
 
                         <span className={`flex items-center
-                            ${props.price <= 30 && 'text-purple-500 fill-purple-500'} 
-                            ${props.price > 30 && props.price <= 60 && 'text-green-500 fill-green-500'} 
-                            ${props.price > 60 && props.price < 100 && 'text-orange-500 fill-orange-500'}
-                            ${props.price >= 100 && 'text-red-500 fill-red-500'}
+                            ${props.duration <= 30 && 'text-purple-500 fill-purple-500'} 
+                            ${props.duration > 30 && props.duration <= 60 && 'text-green-500 fill-green-500'} 
+                            ${props.duration > 60 && props.duration < 100 && 'text-orange-500 fill-orange-500'}
+                            ${props.duration >= 100 && 'text-red-500 fill-red-500'}
                         `}>
                             <Stopwatch className="mr-2 w-6 h-6"/> {props.duration} min
                         </span>

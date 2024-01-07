@@ -8,3 +8,4 @@ Route::get('/', function () {
 });
 
 require __DIR__.'/recipes.php';
+require __DIR__.'/guides.php';
